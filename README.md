@@ -21,7 +21,7 @@ HTML5: For the structure and content of the web pages.
 
 CSS3: For all custom styling, layout (Flexbox/Grid), and responsiveness.
 
-JavaScript (ES6+): For all client-side logic, including DOM manipulation, event handling, filtering, and interacting with localStorage.
+JavaScript: For all client-side logic, including DOM manipulation, event handling, filtering, and interacting with localStorage.
 
 Setup and Installation
 This project requires no complex installation or dependencies.
