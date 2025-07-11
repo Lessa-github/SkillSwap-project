@@ -1,0 +1,70 @@
+<!-- 
+    File: offer.html
+    This page contains a simple form to offer a new skill.
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Offer a Skill - SkillSwap</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header class="main-header">
+        <div class="container">
+            <h1 class="logo">SkillSwap</h1>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Marketplace</a></li>
+                    <li><a href="profile.html">My Profile</a></li>
+                    <li><a href="messages.html">Messages</a></li>
+                    <li><a href="offer.html" class="btn active">Offer a Skill</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="page-intro">
+            <h2>Offer a New Skill</h2>
+            <p>Share your talent with the community!</p>
+        </section>
+
+        <form id="offerForm" class="form-card">
+            <div class="form-group">
+                <label for="skillTitle">Skill Title</label>
+                <input type="text" id="skillTitle" name="skillTitle" required>
+            </div>
+            <div class="form-group">
+                <label for="skillCategory">Category</label>
+                <select id="skillCategory" name="skillCategory">
+                    <option>Creative</option>
+                    <option>Technical</option>
+                    <option>Languages</option>
+                    <option>Wellness</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="skillWants">In exchange for...</label>
+                <input type="text" id="skillWants" name="skillWants" required>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn">Submit Skill</button>
+            </div>
+        </form>
+        <div id="formMessage" class="placeholder-box hidden"></div>
+    </main>
+
+    <footer class="main-footer">
+        <p>&copy; 2025 SkillSwap. A project for IST107.</p>
+    </footer>
+
+    <!-- Link to the JavaScript file -->
+    <script src="js/script.js"></script>
+</body>
+
+</html>

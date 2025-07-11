@@ -1,0 +1,70 @@
+<!-- 
+    File: index.html (Marketplace Page)
+    This is the main page of the application.
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkillSwap - Marketplace</title>
+    <!-- Link to the CSS file -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header class="main-header">
+        <div class="container">
+            <h1 class="logo">SkillSwap</h1>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html" class="active">Marketplace</a></li>
+                    <li><a href="profile.html">My Profile</a></li>
+                    <li><a href="messages.html">Messages</a></li>
+                    <li><a href="offer.html" class="btn">Offer a Skill</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="page-intro">
+            <h2>Find a Skill</h2>
+            <p>Explore the marketplace to learn something new from the community.</p>
+        </section>
+
+        <!-- Search and Filter Section -->
+        <section class="search-filter-box">
+            <!-- Input for search -->
+            <input type="text" id="searchInput" placeholder="Search for a skill...">
+
+            <!-- Label for the category filter -->
+            <label for="categoryFilter" class="sr-only">Filter by Category</label>
+
+            <!-- The select element itself -->
+            <select id="categoryFilter">
+                <option value="all">All Categories</option>
+                <option value="Creative">Creative</option>
+                <option value="Technical">Technical</option>
+                <option value="Languages">Languages</option>
+                <option value="Wellness">Wellness</option>
+            </select>
+        </section>
+
+        <!-- Skill Listings Section -->
+        <section id="skill-listings" class="skill-grid">
+            <!-- Skill cards will be dynamically inserted here by script.js -->
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <p>&copy; 2025 SkillSwap. A project for IST107.</p>
+    </footer>
+
+    <!-- Link to the JavaScript file -->
+    <script src="js/script.js"></script>
+</body>
+
+</html>
