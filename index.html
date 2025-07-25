@@ -1,7 +1,3 @@
-<!-- 
-    File: index.html (Marketplace Page)
-    This is the main page of the application.
--->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,63 +5,62 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SkillSwap - Marketplace</title>
-    <!-- Link to the CSS file -->
     <link rel="stylesheet" href="css/style.css">
-    <!-- Link to Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 
 <body>
+    <div class="content-wrap">
+        <header class="main-header">
+            <div class="container">
+                <h1 class="logo"><i class="fas fa-people-arrows"></i> SkillSwap</h1>
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="index.html" class="active">Marketplace</a></li>
+                        <li><a href="profile.html">My Profile</a></li>
+                        <li><a href="messages.html">Messages</a></li>
+                        <li><a href="offer.html" class="btn">Offer a Skill</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
 
-    <header class="main-header">
-        <div class="container">
-            <h1 class="logo"><i class="fas fa-people-arrows"></i> SkillSwap</h1>
-            <nav class="main-nav">
-                <ul>
-                    <li><a href="index.html" class="active">Marketplace</a></li>
-                    <li><a href="profile.html">My Profile</a></li>
-                    <li><a href="messages.html">Messages</a></li>
-                    <li><a href="offer.html" class="btn">Offer a Skill</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+        <main class="container">
+            <section class="page-intro">
+                <h2>Find a Skill</h2>
+                <p>Explore the marketplace to learn something new from the community.</p>
+            </section>
 
-    <main class="container">
-        <section class="page-intro">
-            <h2>Find a Skill</h2>
-            <p>Explore the marketplace to learn something new from the community.</p>
-        </section>
+            <section class="data-management">
+                <button id="load-cloud-btn" class="btn btn-secondary">Load from Cloud</button>
+                <button id="save-cloud-btn" class="btn btn-secondary">Save to Cloud</button>
+                <button id="import-btn" class="btn btn-secondary">Import from File</button>
+                <button id="export-file-btn" class="btn btn-secondary">Export to File</button>
+                <input type="file" id="import-file" accept=".json" class="hidden" aria-label="Import JSON file">
+            </section>
 
-        <!-- Search and Filter Section -->
-        <section class="search-filter-box">
-            <!-- Input for search -->
-            <input type="text" id="searchInput" placeholder="Search for a skill...">
+            <section class="search-filter-box">
+                <input type="text" id="searchInput" placeholder="Search for a skill...">
+                <label for="categoryFilter" class="sr-only">Filter by Category</label>
+                <select id="categoryFilter">
+                    <option value="all">All Categories</option>
+                    <option value="Creative">Creative</option>
+                    <option value="Technical">Technical</option>
+                    <option value="Languages">Languages</option>
+                    <option value="Wellness">Wellness</option>
+                    <option value="Home & Garden">Home & Garden</option>
+                </select>
+            </section>
 
-            <!-- Label for the category filter -->
-            <label for="categoryFilter" class="sr-only">Filter by Category</label>
-
-            <!-- The select element itself -->
-            <select id="categoryFilter">
-                <option value="all">All Categories</option>
-                <option value="Creative">Creative</option>
-                <option value="Technical">Technical</option>
-                <option value="Languages">Languages</option>
-                <option value="Wellness">Wellness</option>
-            </select>
-        </section>
-
-        <!-- Skill Listings Section -->
-        <section id="skill-listings" class="skill-grid">
-            <!-- Skill cards will be dynamically inserted here by script.js -->
-        </section>
-    </main>
+            <section id="skill-listings" class="skill-grid">
+            </section>
+        </main>
+    </div>
 
     <footer class="main-footer">
         <p>&copy; 2025 SkillSwap. A project for IST107.</p>
     </footer>
 
-    <!-- Link to the JavaScript file -->
     <script src="js/script.js"></script>
 </body>
 

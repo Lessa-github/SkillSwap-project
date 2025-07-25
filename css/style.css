@@ -1,200 +1,253 @@
-/* File: css/style.css
-    This file contains all the basic styles for the application.
-*/
+/* File: css/style.css */
 
 /* General Body and Typography */
+html,
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    background-color: #f4f4f4;
-    color: #333;
-    line-height: 1.6;
+  height: 100%;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.content-wrap {
+  flex: 1 0 auto;
+}
+
+.main-footer {
+  flex-shrink: 0;
 }
 
 .container {
-    width: 90%;
-    max-width: 1100px;
-    margin: auto;
-    overflow: hidden;
-    padding: 0 20px;
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+  overflow: hidden;
+  padding: 0 20px;
 }
 
 /* Header and Navigation */
 .main-header {
-    background: #fff;
-    color: #333;
-    padding: 1rem 0;
-    border-bottom: 1px solid #ddd;
-    position: sticky;
-    top: 0;
-    z-index: 100;
+  background: #fff;
+  padding: 1rem 0;
+  border-bottom: 1px solid #ddd;
 }
-
 .main-header .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-
 .logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #f97316; /* Orange color for the logo */
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #f97316;
 }
-
+.logo i {
+  margin-right: 8px;
+}
 .main-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
 }
-
 .main-nav ul li {
-    margin-left: 20px;
+  margin-left: 20px;
 }
-
 .main-nav a {
-    color: #333;
-    text-decoration: none;
-    padding: 5px 10px;
-    transition: color 0.3s;
+  color: #333;
+  text-decoration: none;
+  padding: 5px 10px;
+  transition: color 0.3s;
 }
-
-.main-nav a:hover, .main-nav a.active {
-    color: #f97316;
+.main-nav a:hover,
+.main-nav a.active {
+  color: #f97316;
 }
 
 /* Button Styles */
 .btn {
-    background: #f97316;
-    color: #fff;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 5px;
-    text-decoration: none;
-    cursor: pointer;
-    transition: background-color 0.3s;
+  background: #f97316;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
-
 .btn:hover {
-    background: #e86a0f;
+  background: #e86a0f;
+}
+.btn.btn-secondary {
+  background-color: #6c757d;
+}
+.btn.btn-secondary:hover {
+  background-color: #5a6268;
 }
 
-/* Page Introduction */
+/* Other styles */
 .page-intro {
-    text-align: center;
-    padding: 2rem 0;
+  text-align: center;
+  padding: 2rem 0;
 }
-
 .page-intro h2 {
-    margin-bottom: 0.5rem;
+  margin-bottom: 0.5rem;
 }
-
-/* Skill Grid Layout */
+.data-management {
+  text-align: center;
+  margin-bottom: 20px;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
 .skill-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 20px;
-    padding: 20px 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px 0;
 }
-
-/* Skill Card Styles */
 .skill-card {
-    background: #fff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 20px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    transition: transform 0.3s;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
 }
-
 .skill-card:hover {
-    transform: translateY(-5px);
+  transform: translateY(-5px);
 }
-
 .skill-card h3 {
-    margin-top: 0;
-    color: #0a2540; /* Dark blue for titles */
+  margin-top: 0;
+  color: #0a2540;
 }
-
 .skill-card .user-info {
-    font-size: 0.9rem;
-    color: #777;
-    margin-bottom: 15px;
+  font-size: 0.9rem;
+  color: #777;
+  margin-bottom: 15px;
 }
-
 .skill-card .wants {
-    background-color: #fff8f0;
-    border-left: 4px solid #f97316;
-    padding: 10px;
-    margin-top: 15px;
-    font-size: 0.9rem;
+  background-color: #fff8f0;
+  border-left: 4px solid #f97316;
+  padding: 10px;
+  margin-top: 15px;
+  font-size: 0.9rem;
 }
-
-/* Search and Filter Box */
 .search-filter-box {
-    background: #fff;
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 8px;
-    display: flex;
-    gap: 20px;
+  background: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  display: flex;
+  gap: 20px;
 }
-.search-filter-box input, .search-filter-box select {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+.search-filter-box input,
+.search-filter-box select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
 }
-
-/* Profile Page Styles */
-.profile-card, .profile-skills, .placeholder-box, .form-card {
-    background: #fff;
-    padding: 20px;
-    margin-top: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+.profile-card,
+.profile-skills,
+.placeholder-box,
+.form-card {
+  background: #fff;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 .profile-avatar {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    border: 3px solid #f97316;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 3px solid #f97316;
 }
 .rating {
-    color: #f97316;
-    font-weight: bold;
+  color: #f97316;
+  font-weight: bold;
 }
-
-/* Form Styles */
 .form-group {
-    margin-bottom: 15px;
+  margin-bottom: 15px;
 }
 .form-group label {
-    display: block;
-    margin-bottom: 5px;
+  display: block;
+  margin-bottom: 5px;
 }
-.form-group input, .form-group select {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    box-sizing: border-box; /* Important for padding and width */
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+.main-footer {
+  text-align: center;
+  padding: 2rem 0;
+  background: #333;
+  color: #fff;
+}
+.hidden {
+  display: none;
+}
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
 }
 
-/* Footer */
-.main-footer {
-    text-align: center;
-    padding: 2rem 0;
-    margin-top: 2rem;
-    background: #333;
-    color: #fff;
+/* Styles for the message list */
+.message-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1rem;
 }
-/* Utility class to hide elements */
-.hidden {
-    display: none;
+.message {
+  padding: 10px 15px;
+  border-radius: 18px;
+  margin-bottom: 10px;
+  max-width: 70%;
+  line-height: 1.4;
 }
-.logo i {
-    margin-right: 8px;
+.message.sent {
+  background-color: #f97316;
+  color: white;
+  margin-left: auto;
+  border-bottom-right-radius: 4px;
+}
+.message.received {
+  background-color: #e9e9eb;
+  color: black;
+  margin-right: auto;
+  border-bottom-left-radius: 4px;
+}
+.message .skill-name {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding-bottom: 5px;
+}
+.message .user-name {
+  font-size: 0.8rem;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 4px;
+  color: #555;
 }
